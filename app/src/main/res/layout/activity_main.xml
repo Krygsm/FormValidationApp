@@ -38,28 +38,21 @@
         />
 
         <EditText
-            android:id="@+id/mailForm"
+            android:id="@+id/passwordForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="e-mail"
-            android:inputType="textEmailAddress"
+            android:hint="password"
+            android:inputType="textPassword"
         />
 
         <EditText
-            android:id="@+id/mailForm"
+            android:id="@+id/confirmationForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="e-mail"
-            android:inputType="textEmailAddress"
+            android:hint="password confirmation"
+            android:inputType="textPassword"
             />
 
-        <EditText
-            android:id="@+id/mailForm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="e-mail"
-            android:inputType="textEmailAddress"
-            />
 
 
         <Button
