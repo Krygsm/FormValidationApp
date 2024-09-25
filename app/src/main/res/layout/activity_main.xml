@@ -22,6 +22,14 @@
         />
 
         <EditText
+            android:id="@+id/surnameForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
             android:id="@+id/mailForm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
