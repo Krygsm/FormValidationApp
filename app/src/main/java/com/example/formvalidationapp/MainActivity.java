@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity
                 String password = passwordInputForm.getText().toString().trim();
                 String confirmation = confirmationInputForm.getText().toString().trim();
 
-                if(password.length() > 0 && confirmation.length() > 0 && !password.equals(confirmation)) { Toast.makeText(MainActivity.this,  "Hasła się nie zgadzają", Toast.LENGTH_SHORT).show(); return; }
-                if(mail.length() > 0 && (!Patterns.EMAIL_ADDRESS.matcher(mail).matches())) { Toast.makeText(MainActivity.this,  "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show(); return; }
+                if(!password.isEmpty() && !confirmation.isEmpty() && !password.equals(confirmation)) { Toast.makeText(MainActivity.this,  "Hasła się nie zgadzają", Toast.LENGTH_SHORT).show(); return; }
+                if(!mail.isEmpty() && (!Patterns.EMAIL_ADDRESS.matcher(mail).matches())) { Toast.makeText(MainActivity.this,  "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show(); return; }
 
                 if(name.isEmpty()) { Toast.makeText(MainActivity.this,  "Wprowadź imię", Toast.LENGTH_SHORT).show();  return; }
                 if(mail.isEmpty()) { Toast.makeText(MainActivity.this,  "Wprowadź e-mail", Toast.LENGTH_SHORT).show(); return; }
