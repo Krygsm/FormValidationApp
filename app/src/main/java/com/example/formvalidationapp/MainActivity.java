@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity
 
         submitButton = findViewById(R.id.submit);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 String name = nameInputForm.getText().toString().trim();
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity
 
                 if(!password.isEmpty() && !confirmation.isEmpty() && !password.equals(confirmation)) { Toast.makeText(MainActivity.this,  "Hasła się nie zgadzają", Toast.LENGTH_SHORT).show(); return; }
                 if(!mail.isEmpty() && (!Patterns.EMAIL_ADDRESS.matcher(mail).matches())) { Toast.makeText(MainActivity.this,  "Niepoprawny adres e-mail", Toast.LENGTH_SHORT).show(); return; }
-                if(!number.isEmpty() && number.length() < 9) { Toast.makeText(MainActivity.this,  "Nuemr telefonu powinien mieć min. 9 znaków", Toast.LENGTH_SHORT).show(); return; }
+                if(!number.isEmpty() && number.replace(" ", "").length() < 9) { Toast.makeText(MainActivity.this,  "Nuemr telefonu powinien mieć min. 9 znaków", Toast.LENGTH_SHORT).show(); return; }
                 if(!password.isEmpty() && password.length() < 6) { Toast.makeText(MainActivity.this,  "Hasło powinno mieć min. 6 znaków", Toast.LENGTH_SHORT).show(); return; }
 
                 if(name.isEmpty()) { Toast.makeText(MainActivity.this,  "Wprowadź imię", Toast.LENGTH_SHORT).show();  return; }
